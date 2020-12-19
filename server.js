@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const { ROLE, users } = require("./data");
+const projectRouter = require("./routes/projects");
 const { authUser, authRole } = require("./basicAuth");
 
 const HOST = "0.0.0.0";
@@ -8,7 +9,7 @@ const PORT = 3003;
 
 app.use(express.json());
 app.use(setUser);
-// app.use("/projects", projectRouter);
+app.use("/projects", projectRouter);
 
 app.get("/", (req, res) => {
   res.send("Home Page");

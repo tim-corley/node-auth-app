@@ -1,3 +1,8 @@
+// curl --header "Content-Type: application/json" \
+// --request GET \
+// --data '{"userId": 2}' \
+// localhost:3003/admin
+
 const authUser = (req, res, next) => {
   if (req.user == null) {
     res.status(403);
