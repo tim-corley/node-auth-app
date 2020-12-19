@@ -19,13 +19,22 @@ sudo docker exec -it <container-id> /bin/sh
 sudo docker stop <container-id>
 ```
 
-### Making HTTP Requests
+### Make HTTP Requests w/ cURL
 ```
 curl --header "Content-Type: application/json" \
-> --request GET \
-> --data '{"userId": 1}' \
-> localhost:3003/dashboard
+ --request GET \
+ --data '{"userId": 1}' \
+ localhost:3003/dashboard
 
+ curl --header "Content-Type: application/json" \
+ --request GET \
+ --data '{"userId": 2}' \
+ localhost:3003/admin
+
+ curl --header "Content-Type: application/json" \
+--request GET \
+--data '{"userId": 1}' \
+localhost:3003/projects | json_pp
 ```
 
 ### Resources
