@@ -1,5 +1,7 @@
 # Simple User Authentication
 
+This is an API built with Express that demonstrates protected routes / user authentication.
+
 ### To Run
 ```
 npm install
